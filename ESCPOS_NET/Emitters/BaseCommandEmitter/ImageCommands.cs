@@ -1,7 +1,8 @@
 using ESCPOS_NET.Emitters.BaseCommandValues;
 using ESCPOS_NET.Utilities;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
+using ESCPOS_NET.Extensions;
+using SkiaSharp;
+using System;
 
 namespace ESCPOS_NET.Emitters
 {
@@ -60,11 +61,9 @@ namespace ESCPOS_NET.Emitters
             int width;
             int height;
             byte[] imageData;
-            using (var img = Image.Load<Rgba32>(image))
+            using (var img = SKBitmap.Decode(image) ?? throw new ArgumentException("Unable to decode image data.", nameof(image)))
             {
-                imageData = img.ToSingleBitPixelByteArray(maxWidth: maxWidth == -1 ? (int?)null : maxWidth);
-                height = img.Height;
-                width = img.Width;
+                imageData = img.ToSingleBitPixelByteArray(out width, out height, maxWidth: maxWidth == -1 ? (int?)null : maxWidth);
             }
 
             byte heightL = (byte)height;
