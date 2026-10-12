@@ -3,24 +3,26 @@
 		<TargetFramework>net10.0</TargetFramework>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Company>animalistic.io</Company>
+		<Company></Company>
 		<Product>ESCPOS_NET</Product>
-		<Authors>Luke Paireepinart</Authors>
+		<Authors>Jonathan Soderberg, Luke Paireepinart</Authors>
 		<Description>
 			.NET 10 implementation of ESC/POS command generation and integration with thermal printers.
 			Allows creating receipts with all common functionality supported.
 		</Description>
-		<Copyright>Copyright 2022 CandL Development, LLC.</Copyright>
+		<Copyright>Copyright (c) 2019 Luke Paireepinart Copyright (c) 2026 Jonathan Soderberg</Copyright>
 		<PackageLicenseUrl></PackageLicenseUrl>
-		<RepositoryUrl>https://github.com/lukevp/ESC-POS-.NET</RepositoryUrl>
+		<RepositoryUrl>https://github.com/jonathanbex/ESC-POS-.NET</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>epson thermal receipt printing printer usb wifi bluetooth serial esc pos escpos escp esc/pos esc/pos.net esc_pos esc_pos_net esc_pos_usb esc_pos_usb_net</PackageTags>
-		<Version>3.0.0</Version>
-		<AssemblyVersion>2.1.0.0</AssemblyVersion>
-		<FileVersion>2.1.0.0</FileVersion>
+		<Version>0.1</Version>
+		<AssemblyVersion>0.1</AssemblyVersion>
+		<FileVersion>0.1</FileVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/lukevp/ESC-POS-.NET</PackageProjectUrl>
-		<PackageReleaseNotes>- Completely rebuilt the network printer code</PackageReleaseNotes>
+		<PackageProjectUrl>https://github.com/jonathanbex/ESC-POS-.NET</PackageProjectUrl>
+		<PackageReleaseNotes>- Remove ImageSharp, added Skiasharp and updated to .net10</PackageReleaseNotes>
+		<Title>ESCPOS_NET10_J</Title>
+		<PackageId>$(AssemblyName)_J</PackageId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

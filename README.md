@@ -16,6 +16,14 @@
     <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/lukevp/ESC-POS-.NET">
     </a>
 </p>
+
+> **About this fork**
+>
+> This is a fork of [lukevp/ESC-POS-.NET](https://github.com/lukevp/ESC-POS-.NET) with the following changes:
+>
+> - **Updated to .NET 10.** All projects target `net10.0` (the library previously targeted .NET Standard 2.0), so it no longer runs on .NET Framework or older .NET versions.
+> - **Replaced SixLabors.ImageSharp with SkiaSharp** for image loading, resizing and dithering. The `PrintImage` / `BufferImage` API is unchanged. On Linux, add the `SkiaSharp.NativeAssets.Linux.NoDependencies` package to your app so SkiaSharp's native library is available.
+
 ESCPOS.NET is a super easy to use library that supports the most common functionality of the ESC/POS standard by Epson.  It is highly compatible, and runs on full framework .NET as well as .NET Core.
 
 It works with Serial, USB, Ethernet, and WiFi printers, and works great on Windows, Linux and OSX.
